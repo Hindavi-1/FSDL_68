@@ -9,36 +9,33 @@
 </head>
 <body>
 
-  <!-- Include Navbar -->
-  <?php include('navbar.html'); ?>
+  <!-- Container to load Navbar, Content, and Footer dynamically -->
+  <div id="navbar-container"></div>
+  <div class="container mt-4" id="main-content"></div>
+  <div id="footer-container"></div>
 
-  <!-- Main Content -->
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-4">
-        <!-- Include Card 1 -->
-        <?php include('card1.html'); ?>
-      </div>
-      <div class="col-md-4">
-        <!-- Include Card 2 -->
-        <?php include('card2.html'); ?>
-      </div>
-      <div class="col-md-4">
-        <!-- Include Card 3 -->
-        <?php include('card3.html'); ?>
-      </div>
-    </div>
-  </div>
+  <script>
+    // Function to load external HTML into a container
+    function loadHTML(url, elementId) {
+      fetch(url)
+        .then(response => response.text())
+        .then(data => document.getElementById(elementId).innerHTML = data)
+        .catch(error => console.error('Error loading HTML:', error));
+    }
 
-  <!-- Include Footer -->
-  <?php include('footer.html'); ?>
+    // Load Navbar, Cards, and Footer
+    loadHTML('navbar.html', 'navbar-container');
+    loadHTML('card1.html', 'main-content');
+    loadHTML('card2.html', 'main-content');
+    loadHTML('card3.html', 'main-content');
+    loadHTML('footer.html', 'footer-container');
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
 
 
 <!-- <!DOCTYPE html>

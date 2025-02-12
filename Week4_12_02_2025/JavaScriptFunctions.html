@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .output {
+            background-color: #e0ffe0;
+            padding: 10px;
+            border: 1px solid #66cc66;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style> -->
+    <link href="JS_Operators.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <h1>JavaScript Functions</h1>
+
+    <h2>Example 1: Function Declaration</h2>
+    <pre>
+// Function declaration
+function add(a, b) {
+    return a + b;
+}
+
+console.log(add(2, 3));  // Output: 5
+    </pre>
+    <div class="output" id="output1"></div>
+
+    <h2>Example 2: Function Expression</h2>
+    <pre>
+// Function expression
+const multiply = function(a, b) {
+    return a * b;
+};
+
+console.log(multiply(4, 5));  // Output: 20
+    </pre>
+    <div class="output" id="output2"></div>
+
+    <h2>Example 3: Arrow Function</h2>
+    <pre>
+// Arrow function
+const subtract = (a, b) => a - b;
+
+console.log(subtract(10, 4));  // Output: 6
+    </pre>
+    <div class="output" id="output3"></div>
+
+    <h2>Example 4: Function with Default Parameters</h2>
+    <pre>
+// Function with default parameters
+function greet(name = "Guest") {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("Alice"));  // Output: Hello, Alice!
+console.log(greet());         // Output: Hello, Guest!
+    </pre>
+    <div class="output" id="output4"></div>
+
+    <h2>Example 5: Function with Return Value</h2>
+    <pre>
+// Function with a return value
+function square(x) {
+    return x * x;
+}
+
+let result = square(6);
+console.log(result);  // Output: 36
+    </pre>
+    <div class="output" id="output5"></div>
+
+    <script>
+        // Example 1: Function Declaration
+        function add(a, b) {
+            return a + b;
+        }
+        document.getElementById("output1").innerText = `add(2, 3): ${add(2, 3)}`;
+
+        // Example 2: Function Expression
+        const multiply = function(a, b) {
+            return a * b;
+        };
+        document.getElementById("output2").innerText = `multiply(4, 5): ${multiply(4, 5)}`;
+
+        // Example 3: Arrow Function
+        const subtract = (a, b) => a - b;
+        document.getElementById("output3").innerText = `subtract(10, 4): ${subtract(10, 4)}`;
+
+        // Example 4: Function with Default Parameters
+        function greet(name = "Guest") {
+            return `Hello, ${name}!`;
+        }
+        document.getElementById("output4").innerText = `
+greet("Alice"): ${greet("Alice")}
+greet(): ${greet()}
+        `;
+
+        // Example 5: Function with Return Value
+        function square(x) {
+            return x * x;
+        }
+        let result = square(6);
+        document.getElementById("output5").innerText = `square(6): ${result}`;
+    </script>
+</body>
+</html>

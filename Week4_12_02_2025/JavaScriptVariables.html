@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="JS_variables.css">
+
+</head>
+<body>
+    <h1>Example of variables in JavaScript</h1>
+    const name = 'Hindavi'<br>
+    let no = 5<br>
+    document.write(name)<br><br>
+
+    Output: Hindavi
+    
+</body>
+
+<body>
+    <h1>JavaScript Variable Declaration with `const`</h1>
+
+    <h2>Example 1: Simple Variable Declaration</h2>
+    <pre>
+const myNumber = 10;
+console.log(myNumber); // Output: 10
+    </pre>
+    <div class="output" id="output1"></div>
+
+    <h2>Example 2: Declaring an Object</h2>
+    <pre>
+const person = {
+    name: "Alice",
+    age: 25
+};
+console.log(person.name); // Output: Alice
+person.name = "Bob";
+console.log(person.name); // Output: Bob
+    </pre>
+    <div class="output" id="output2"></div>
+
+    <!-- Example 3 -->
+    <h2>Example 3: Declaring an Array</h2>
+    <pre>
+const numbers = [1, 2, 3];
+console.log(numbers); // Output: [1, 2, 3]
+numbers.push(4);
+console.log(numbers); // Output: [1, 2, 3, 4]
+    </pre>
+    <div class="output" id="output3"></div>
+
+    <script>
+        // JavaScript to display output for each example
+        const myNumber = 10;
+        document.getElementById("output1").innerText = myNumber;
+
+        const person = {
+            name: "Alice",
+            age: 25
+        };
+        document.getElementById("output2").innerText = `Name: ${person.name}, Age: ${person.age}`;
+
+        const numbers = [1, 2, 3];
+        numbers.push(4);
+        document.getElementById("output3").innerText = `Array: ${numbers.join(", ")}`;
+    </script>
+</body> 
+
+
+
+</html>

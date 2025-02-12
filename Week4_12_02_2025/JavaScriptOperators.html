@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Operators</title>
+   <link href="JS_Operators.css" rel="stylesheet">
+</head>
+<body>
+    <h1>JavaScript Operators</h1>
+
+    <h2>Example 1: Arithmetic Operators</h2>
+    <pre>
+// Arithmetic operators: +, -, *, /, %, ++, --
+let a = 10, b = 3;
+
+let addition = a + b;
+let subtraction = a - b;
+let multiplication = a * b;
+let division = a / b;
+let remainder = a % b;
+let increment = ++a;  // Pre-increment
+let decrement = --b;  // Pre-decrement
+
+console.log(addition, subtraction, multiplication, division, remainder, increment, decrement);
+    </pre>
+    <div class="output" id="output1"></div>
+
+    <h2>Example 2: Comparison Operators</h2>
+    <pre>
+// Comparison operators: ==, ===, !=, !==, >, <, >=, <=
+let x = 5, y = '5';
+
+let equality = (x == y);      // Loose equality (checks value only)
+let strictEquality = (x === y);  // Strict equality (checks value and type)
+let notEqual = (x != y);      // Loose inequality
+let strictNotEqual = (x !== y); // Strict inequality
+let greaterThan = (x > 3);    // Greater than
+let lessThan = (x < 10);      // Less than
+let greaterThanEqual = (x >= 5); // Greater than or equal to
+let lessThanEqual = (x <= 5); // Less than or equal to
+
+console.log(equality, strictEquality, notEqual, strictNotEqual, greaterThan, lessThan, greaterThanEqual, lessThanEqual);
+    </pre>
+    <div class="output" id="output2"></div>
+
+    <h2>Example 3: Logical Operators</h2>
+    <pre>
+// Logical operators: && (AND), || (OR), ! (NOT)
+let isTrue = true, isFalse = false;
+
+let andOperator = (isTrue && isFalse);  // AND operator
+let orOperator = (isTrue || isFalse);   // OR operator
+let notOperator = !isTrue;              // NOT operator
+
+console.log(andOperator, orOperator, notOperator);
+    </pre>
+    <div class="output" id="output3"></div>
+
+    <h2>Example 4: Assignment Operators</h2>
+    <pre>
+// Assignment operators: =, +=, -=, *=, /=, %=
+let num = 10;
+
+num += 5;  // num = num + 5
+num -= 3;  // num = num - 3
+num *= 2;  // num = num * 2
+num /= 4;  // num = num / 4
+num %= 3;  // num = num % 3
+
+console.log(num);
+    </pre>
+    <div class="output" id="output4"></div>
+
+    <script>
+        // JavaScript to display the output for each example
+
+        // Example 1: Arithmetic Operators
+        let a = 10, b = 3;
+        let addition = a + b;
+        let subtraction = a - b;
+        let multiplication = a * b;
+        let division = a / b;
+        let remainder = a % b;
+        let increment = ++a;  // Pre-increment
+        let decrement = --b;  // Pre-decrement
+        document.getElementById("output1").innerText = `
+Addition: ${addition}
+Subtraction: ${subtraction}
+Multiplication: ${multiplication}
+Division: ${division}
+Remainder: ${remainder}
+Increment (pre-increment): ${increment}
+Decrement (pre-decrement): ${decrement}
+        `;
+
+        // Example 2: Comparison Operators
+        let x = 5, y = '5';
+        let equality = (x == y);
+        let strictEquality = (x === y);
+        let notEqual = (x != y);
+        let strictNotEqual = (x !== y);
+        let greaterThan = (x > 3);
+        let lessThan = (x < 10);
+        let greaterThanEqual = (x >= 5);
+        let lessThanEqual = (x <= 5);
+        document.getElementById("output2").innerText = `
+Equality (x == y): ${equality}
+Strict Equality (x === y): ${strictEquality}
+Not Equal (x != y): ${notEqual}
+Strict Not Equal (x !== y): ${strictNotEqual}
+Greater Than (x > 3): ${greaterThan}
+Less Than (x < 10): ${lessThan}
+Greater Than or Equal (x >= 5): ${greaterThanEqual}
+Less Than or Equal (x <= 5): ${lessThanEqual}
+        `;
+
+        // Example 3: Logical Operators
+        let isTrue = true, isFalse = false;
+        let andOperator = (isTrue && isFalse);
+        let orOperator = (isTrue || isFalse);
+        let notOperator = !isTrue;
+        document.getElementById("output3").innerText = `
+AND (isTrue && isFalse): ${andOperator}
+OR (isTrue || isFalse): ${orOperator}
+NOT (!isTrue): ${notOperator}
+        `;
+
+        // Example 4: Assignment Operators
+        let num = 10;
+        num += 5;  // num = num + 5
+        num -= 3;  // num = num - 3
+        num *= 2;  // num = num * 2
+        num /= 4;  // num = num / 4
+        num %= 3;  // num = num % 3
+        document.getElementById("output4").innerText = `Result after assignment operators: ${num}`;
+    </script>
+</body>
+</html>

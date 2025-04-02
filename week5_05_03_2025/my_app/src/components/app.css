@@ -1,0 +1,34 @@
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+  }
+  /* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #72c2ff, #a8d0e6);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Main container */
+  .App {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
